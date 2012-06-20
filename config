@@ -1,7 +1,0 @@
-[core]
-	repositoryformatversion = 0
-	filemode = true
-	bare = true
-[remote "som"]
-	url = ssh://ssh.blmsmtrm.com:2047/home/kalle/kod/ruby/som
-	fetch = +refs/heads/*:refs/remotes/som/*
