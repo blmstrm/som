@@ -1,4 +1,4 @@
-require_relative 'Node'
+require_relative 'node'
 class SOM
   attr_accessor :learningRate, :lrStart , :maxIterations, :xSize, :ySize, :nodeMap, :bmu, :distance2bmu
   def initialize(lrate,maxIt, x, y, weightCount)
@@ -31,7 +31,8 @@ class SOM
 
       if distance < distance2bmu || distance2bmu == -1
         bmu = node
-      distance2bmu = distance
+        distance2bmu = distance
       end
+    }
   end
 end
