@@ -35,4 +35,12 @@ class SOM
       end
     }
   end
+
+  def export2cvs(filename)
+    CSV.open(filename) do |csv|
+      nodeMap.each do | row|
+      output << row
+      end
+    end
+  end
 end
