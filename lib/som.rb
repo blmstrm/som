@@ -1,3 +1,4 @@
+require 'csv'
 require_relative 'node'
 class SOM
   attr_accessor :learningRate, :lrStart , :maxIterations, :xSize, :ySize, :nodeMap, :bmu, :distance2bmu
@@ -37,9 +38,9 @@ class SOM
   end
 
   def export2cvs(filename)
-    CSV.open(filename) do |csv|
+    CSV.open(filename,"wb") do |csv|
       nodeMap.each do | row|
-      output << row
+      filename << row
       end
     end
   end
