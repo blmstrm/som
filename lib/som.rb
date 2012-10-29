@@ -197,6 +197,20 @@ class SOM
     end
   end
 
+  def train(dataSet)
+    @maxIterations.times do |iterations|
+      dataSet.shuffle!
+      puts 'Iteration ' + (iterations+1).to_s
+      dataSet.each{|vertex| 
+        self.getBMU(vertex)
+        self.adjustWeights(vertex,iterations+1)
+      }
+      self.decreaseLearningRate(iterations+1)
+      self.decreaseRadius(iterations+1)
+    end
+      self.populateUvalue()
+  end
+
   def export2cvs(filename)
     File.delete(filename)
     File.open(filename,"w"){|file|
