@@ -18,7 +18,7 @@ After training render a csv file with
 `````ruby
 tmpSom.export2cvs('filename')
 `````
-make filename out to be what ever you please.
+make filename out to be whatever you please.
 
 TODO:
 * Speed up training. Possibly through multi-threading.
