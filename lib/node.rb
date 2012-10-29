@@ -1,9 +1,10 @@
 class Node
-  attr_accessor :X, :Y, :Weights, :BMUradius, :radiusStart, :maxIterations
+  attr_accessor :X, :Y, :Weights, :BMUradius, :radiusStart, :maxIterations, :uValue
   def initialize(nrOfWeights,maxIt)
     @maxIterations = maxIt
-    @Weights = Array.new(nrOfWeight)
-    @Weigths.map!{|weight|rand()}
+    @Weights = Array.new(nrOfWeights)
+    @Weights.map!{|weight|rand()}
+    @uValue = 0
   end
 
   def calculateRadius(iteration)
