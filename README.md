@@ -24,3 +24,4 @@ TODO:
 * Speed up training. Possibly through multi-threading.
 * Enable hexagonal neighbourhoods while training.
 * Enable hexagonal shaped maps.
+* Add comments to code
