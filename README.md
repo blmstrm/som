@@ -25,3 +25,4 @@ TODO:
 * Enable hexagonal neighbourhoods while training.
 * Enable hexagonal shaped maps.
 * Add comments to code
+* Convert to use mongoDB to gain advantage of the shape selection query.
